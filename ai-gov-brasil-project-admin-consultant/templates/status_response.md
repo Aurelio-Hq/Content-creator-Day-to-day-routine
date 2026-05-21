@@ -1,0 +1,10 @@
+# Template — Status Response
+
+```text
+CURRENT_PHASE:
+CURRENT_STEP:
+NEXT_GATE:
+NEXT_DOCUMENT:
+RISK:
+NEXT_ACTION:
+```
