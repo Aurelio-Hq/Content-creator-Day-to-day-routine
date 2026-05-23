@@ -1,0 +1,1634 @@
+# PersonalizationOS — Asset Cards YAML
+# V-20260523-MCP · Minimum Context Packet · All Solutions
+# Total: 44 assets
+# Generated: 2026-05-23 · Owner: Leonardo Batista
+
+assets:
+
+  - asset_id: S-001
+    asset_name: "adhd-desk-dashboard"
+    asset_type: "Skill"
+    status: "Active"
+    promise: "Dashboard de produtividade para profissionais com TDAH usando Claude como sistema de foco e gestão d"
+    target_user: "Profissional com TDAH não diagnosticado ou diagnosticado que perde foco e tem di"
+    user_pain: "Sem sistema externo de foco, cada dia começa do zero, tentativas de GTD falham p"
+    job_to_be_done: "Quando começo o trabalho, quero um dashboard que já saiba meu estado de energia e me dê a próxima aç"
+    input:
+      summary: "Markdown + estado de energia"
+    output:
+      summary: "Dashboard estruturado + lista de tarefas filtrada por energia + rotina do dia"
+    workflow:
+      summary: "Ativar → declarar energia → receber foco do dia"
+    evidence:
+      source: "Internal"
+    commercial:
+      monetization: "Hotmart setup + assinatura"
+      buyer: "Profissional BR não-dev 28-45 anos"
+      price_hypothesis: "R$97-R$197"
+      channel: "LinkedIn + comunidades TDAH"
+    risk:
+      main_risk: "Dependência de Claude para funcionamento"
+      dependency: "Claude"
+      legal_platform_risk: "Low"
+    score:
+      m001_dor_clara: 14
+      m002_output_reproduzivel: 14
+      m003_prova_de_uso: 10
+      m004_monetizacao_plausivel: 10
+      m005_baixa_friccao: 8
+      m006_canal_distribuicao: 8
+      m007_defensibilidade: 5
+      total: 69
+      tier: "Silver"
+    next_test: "Testar com 5 usuários reais com TDAH"
+
+  - asset_id: S-002
+    asset_name: "ai-gov-brasil-project-admin-consultant"
+    asset_type: "Skill"
+    status: "Active"
+    promise: "Consultor de projeto para gestão completa do AI Gov Brasil: fases, gates, decisões, próximos passos "
+    target_user: "Leonardo operando o projeto AI Gov Brasil"
+    user_pain: "Sem o skill, cada sessão requer re-carga de contexto do projeto"
+    job_to_be_done: "Quando abro uma nova sessão, quero que o consultor já saiba em qual fase estou"
+    input:
+      summary: "Conversa sobre o projeto"
+    output:
+      summary: "Status do projeto + próximas 3 tarefas + gate atual"
+    workflow:
+      summary: "Ativar → carregar phase tracker → declarar próximos steps"
+    evidence:
+      source: "Internal"
+    commercial:
+      monetization: "Internal only"
+      buyer: "Leonardo"
+      price_hypothesis: "Uso interno"
+      channel: "Interno"
+    risk:
+      main_risk: "Dependência do corpus do projeto"
+      dependency: "Claude + corpus"
+      legal_platform_risk: "Low"
+    score:
+      m001_dor_clara: 10
+      m002_output_reproduzivel: 18
+      m003_prova_de_uso: 18
+      m004_monetizacao_plausivel: 5
+      m005_baixa_friccao: 10
+      m006_canal_distribuicao: 5
+      m007_defensibilidade: 5
+      total: 71
+      tier: "Silver"
+    next_test: "Documentar como caso de uso para PersonalizationOS Course"
+
+  - asset_id: S-003
+    asset_name: "ai-gov-discovery-orchestrator-standalone"
+    asset_type: "Skill"
+    status: "Active"
+    promise: "RAG embarcado portátil com 68KB de corpus do projeto AI Gov Brasil — acessa handoff completo, decisõ"
+    target_user: "Leonardo gerenciando o AI Gov Brasil em qualquer sessão Claude"
+    user_pain: "Contexto do projeto precisaria ser recarregado manualmente toda sessão"
+    job_to_be_done: "Quando preciso trabalhar no AI Gov Brasil, quero que o Claude já tenha o contexto completo sem colar"
+    input:
+      summary: "Slash command /ai-gov-discovery-orchestrator-standalone"
+    output:
+      summary: "Status completo do projeto + próximos tasks + referências D-###"
+    workflow:
+      summary: "Invocar → TREEFILE carrega → routing → output"
+    evidence:
+      source: "Internal — 8 leituras sequenciais validadas"
+    commercial:
+      monetization: "Internal (case para curso)"
+      buyer: "Leonardo"
+      price_hypothesis: "Uso interno"
+      channel: "GitHub como demo"
+    risk:
+      main_risk: "Corpus fica desatualizado sem manutenção manual"
+      dependency: "Claude + corpus"
+      legal_platform_risk: "Low"
+    score:
+      m001_dor_clara: 12
+      m002_output_reproduzivel: 20
+      m003_prova_de_uso: 18
+      m004_monetizacao_plausivel: 8
+      m005_baixa_friccao: 10
+      m006_canal_distribuicao: 8
+      m007_defensibilidade: 5
+      total: 81
+      tier: "Gold"
+    next_test: "Documentar como proof of concept do PersonalizationOS Course"
+
+  - asset_id: S-004
+    asset_name: "cenefim"
+    asset_type: "Skill"
+    status: "Active"
+    promise: "Classificador Cynefin para categorizar problemas por domínio (Clear/Complicated/Complex/Chaotic) e i"
+    target_user: "Profissional que precisa decidir como abordar um problema antes de resolvê-lo"
+    user_pain: "Escolher a ferramenta errada para o domínio certo — análise demorada em problema"
+    job_to_be_done: "Quando me deparo com um problema, quero saber em qual domínio está para escolher a abordagem certa"
+    input:
+      summary: "Descrição do problema"
+    output:
+      summary: "Classificação Cynefin + tipo de resposta recomendado"
+    workflow:
+      summary: "Ler contexto → classificar → recomendar abordagem"
+    evidence:
+      source: "Internal"
+    commercial:
+      monetization: "Componente do CMD Suite e Creator Suite"
+      buyer: "Solo founder, gestor, consultor"
+      price_hypothesis: "Bundled"
+      channel: "LinkedIn + GitHub"
+    risk:
+      main_risk: "Conceito Cynefin não é amplamente conhecido no Brasil"
+      dependency: "Claude"
+      legal_platform_risk: "Low"
+    score:
+      m001_dor_clara: 16
+      m002_output_reproduzivel: 18
+      m003_prova_de_uso: 14
+      m004_monetizacao_plausivel: 8
+      m005_baixa_friccao: 12
+      m006_canal_distribuicao: 8
+      m007_defensibilidade: 4
+      total: 80
+      tier: "Gold"
+    next_test: "Incluir no M1 do PersonalizationOS Course como exemplo de skill de framework"
+
+  - asset_id: S-005
+    asset_name: "cmd-01-pps"
+    asset_type: "Skill"
+    status: "Active"
+    promise: "Project Packaging System com IDs rastreáveis para transformar arquivos caóticos em repos GitHub pron"
+    target_user: "Solo dev ou creator que precisa empacotar e publicar trabalho recorrentemente"
+    user_pain: "Projetos acumulam arquivos desorganizados que nunca chegam ao GitHub limpos"
+    job_to_be_done: "Quando quero publicar no GitHub, quero que o sistema normalize e empacote automaticamente"
+    input:
+      summary: "Diretório de arquivos + instrução"
+    output:
+      summary: "Repo estruturado + README + naming normalizado + ZIP"
+    workflow:
+      summary: "Analisar → normalizar → empacotar → exportar"
+    evidence:
+      source: "Internal — usado no corpus de Leo"
+    commercial:
+      monetization: "CMD Suite · GitHub · Hotmart"
+      buyer: "Solo founder, PM, criador técnico BR"
+      price_hypothesis: "R$97-R$297 skill pack"
+      channel: "GitHub + LinkedIn técnico"
+    risk:
+      main_risk: "Naming conventions variam por projeto"
+      dependency: "Claude"
+      legal_platform_risk: "Low"
+    score:
+      m001_dor_clara: 16
+      m002_output_reproduzivel: 18
+      m003_prova_de_uso: 14
+      m004_monetizacao_plausivel: 12
+      m005_baixa_friccao: 10
+      m006_canal_distribuicao: 10
+      m007_defensibilidade: 4
+      total: 84
+      tier: "Gold"
+    next_test: "Criar README público + video demo de 3 min"
+
+  - asset_id: S-006
+    asset_name: "cmd-02-mirp"
+    asset_type: "Skill"
+    status: "Active"
+    promise: "Sistema Modify-Improve-Register-Publish para levar qualquer skill por pipeline de melhoria com docum"
+    target_user: "Operador de skill library que precisa evoluir e registrar skills com rastreabili"
+    user_pain: "Skills melhoradas ad hoc ficam sem changelog e portabilidade"
+    job_to_be_done: "Quando melhoro uma skill, quero que o sistema registre a mudança e publique automaticamente"
+    input:
+      summary: "Skill existente + instrução de melhoria"
+    output:
+      summary: "Skill atualizada + changelog + registro Notion + pacote distribuível"
+    workflow:
+      summary: "Analisar → melhorar → registrar D-### → publicar"
+    evidence:
+      source: "Internal"
+    commercial:
+      monetization: "CMD Suite"
+      buyer: "Operadores de skill library, solo devs"
+      price_hypothesis: "Bundled no CMD Suite"
+      channel: "GitHub + LinkedIn técnico"
+    risk:
+      main_risk: "Requer Notion conectado para registro completo"
+      dependency: "Claude + Notion MCP"
+      legal_platform_risk: "Low"
+    score:
+      m001_dor_clara: 14
+      m002_output_reproduzivel: 18
+      m003_prova_de_uso: 12
+      m004_monetizacao_plausivel: 12
+      m005_baixa_friccao: 10
+      m006_canal_distribuicao: 10
+      m007_defensibilidade: 5
+      total: 81
+      tier: "Gold"
+    next_test: "Documentar fluxo completo com antes/depois como case study"
+
+  - asset_id: S-007
+    asset_name: "cmd-03-maro"
+    asset_type: "Skill"
+    status: "Active"
+    promise: "Multi-Agent Research Orchestrator para first-skill discovery — coordena 4 subagentes para pesquisa q"
+    target_user: "Empreendedor BR que precisa qualificar personas de negócios de serviços"
+    user_pain: "Entrevistas e pesquisas manuais são caras e lentas sem sistema estruturado"
+    job_to_be_done: "Quando quero entender meu ICP, quero um sistema que crie formulário, classifique respostas e entregu"
+    input:
+      summary: "Lista de personas candidatas OU descrição do negócio"
+    output:
+      summary: "Formulário de qualificação + schema de transcrição + rubrica de scoring"
+    workflow:
+      summary: "Segmentar → form designer → schema → QA → decisão"
+    evidence:
+      source: "Internal"
+    commercial:
+      monetization: "CMD Suite"
+      buyer: "Empreendedores solo, consultores de marketing BR"
+      price_hypothesis: "R$297-R$497 como metodologia"
+      channel: "LinkedIn + comunidades empreendedoras BR"
+    risk:
+      main_risk: "Pesquisa qualitativa requer participantes reais — Claude não gera respostas verd"
+      dependency: "Claude"
+      legal_platform_risk: "Low"
+    score:
+      m001_dor_clara: 18
+      m002_output_reproduzivel: 18
+      m003_prova_de_uso: 14
+      m004_monetizacao_plausivel: 14
+      m005_baixa_friccao: 10
+      m006_canal_distribuicao: 10
+      m007_defensibilidade: 4
+      total: 88
+      tier: "Diamond"
+    next_test: "Rodar com 3 clientes de consultoria como piloto pago R$500+"
+
+  - asset_id: S-008
+    asset_name: "cognitive-framework-router"
+    asset_type: "Skill"
+    status: "Active"
+    promise: "Roteador cognitivo que detecta intenção do usuário e seleciona silenciosamente a combinação mínima d"
+    target_user: "Profissional do conhecimento que não sabe qual framework usar para cada problema"
+    user_pain: "Framework errado gera análise de baixa qualidade sem o usuário perceber"
+    job_to_be_done: "Quando descrevo um problema, quero que o Claude aplique automaticamente o framework certo"
+    input:
+      summary: "Descrição de problema em linguagem natural"
+    output:
+      summary: "Output estruturado com o framework mais adequado aplicado"
+    workflow:
+      summary: "Detectar intenção → selecionar frameworks (2-3) → aplicar silenciosamente"
+    evidence:
+      source: "Internal — backbone do CMD Global V2"
+    commercial:
+      monetization: "Creator Suite · CMD Suite · PersonalizationOS Course M5"
+      buyer: "Solo founder, consultor, analista, gestor"
+      price_hypothesis: "Bundled (core asset da suite)"
+      channel: "GitHub open source + LinkedIn"
+    risk:
+      main_risk: "Usuário pode não perceber o framework e confundir com resposta longa"
+      dependency: "Claude"
+      legal_platform_risk: "Low"
+    score:
+      m001_dor_clara: 20
+      m002_output_reproduzivel: 20
+      m003_prova_de_uso: 16
+      m004_monetizacao_plausivel: 15
+      m005_baixa_friccao: 10
+      m006_canal_distribuicao: 10
+      m007_defensibilidade: 5
+      total: 96
+      tier: "Diamond"
+    next_test: "Publicar como skill open source no GitHub com exemplos de antes/depois"
+
+  - asset_id: S-009
+    asset_name: "forge-visual-canvas"
+    asset_type: "Skill"
+    status: "Active"
+    promise: "Sistema FORGE para gerar artifacts visuais premium (HTML, React, SVG, PDF, PPTX) com design language"
+    target_user: "Criador ou consultor que precisa de entregas visuais profissionais sem contratar"
+    user_pain: "Outputs de IA ficam com estética genérica sem brand e sem polish profissional"
+    job_to_be_done: "Quando preciso de um entregável visual, quero que o Claude gere com qualidade de agência"
+    input:
+      summary: "Descrição do conteúdo + contexto de marca"
+    output:
+      summary: "Artifact visual premium com brand tokens aplicados"
+    workflow:
+      summary: "Detectar tipo visual → selecionar linguagem → gerar artifact"
+    evidence:
+      source: "Internal — múltiplos cases"
+    commercial:
+      monetization: "Creator Suite · X-Ray Suite"
+      buyer: "Consultor, criador, PM, founder que entrega relatórios e apr"
+      price_hypothesis: "R$197-R$497 standalone ou bundled"
+      channel: "LinkedIn + GitHub + showcase"
+    risk:
+      main_risk: "Qualidade depende de description do contexto de marca — GIGO"
+      dependency: "Claude"
+      legal_platform_risk: "Low"
+    score:
+      m001_dor_clara: 18
+      m002_output_reproduzivel: 20
+      m003_prova_de_uso: 14
+      m004_monetizacao_plausivel: 15
+      m005_baixa_friccao: 10
+      m006_canal_distribuicao: 10
+      m007_defensibilidade: 5
+      total: 92
+      tier: "Diamond"
+    next_test: "Criar showcase de 5 exemplos visuais distintos para LinkedIn"
+
+  - asset_id: S-010
+    asset_name: "product-self-knowledge"
+    asset_type: "Skill"
+    status: "Active"
+    promise: "Base de conhecimento atualizada sobre produtos e capacidades da Anthropic para respostas precisas so"
+    target_user: "Usuário que pergunta sobre limites, preços e capacidades do Claude"
+    user_pain: "Claude alucina sobre suas próprias capacidades — informação desatualizada gera d"
+    job_to_be_done: "Quando preciso de informação precisa sobre Claude, quero que o sistema consulte a base atualizada"
+    input:
+      summary: "Pergunta sobre produto Anthropic"
+    output:
+      summary: "Resposta precisa com referência à fonte correta"
+    workflow:
+      summary: "Detectar pergunta sobre produto → consultar base → responder"
+    evidence:
+      source: "Internal"
+    commercial:
+      monetization: "Creator Suite"
+      buyer: "Todos os usuários Claude"
+      price_hypothesis: "Bundled (componente de segurança)"
+      channel: "GitHub open source"
+    risk:
+      main_risk: "Anthropic muda produtos frequentemente — requer manutenção periódica"
+      dependency: "Claude"
+      legal_platform_risk: "Low"
+    score:
+      m001_dor_clara: 16
+      m002_output_reproduzivel: 16
+      m003_prova_de_uso: 14
+      m004_monetizacao_plausivel: 12
+      m005_baixa_friccao: 12
+      m006_canal_distribuicao: 10
+      m007_defensibilidade: 5
+      total: 85
+      tier: "Gold"
+    next_test: "Revisar e atualizar trimestralmente com changelog"
+
+  - asset_id: S-011
+    asset_name: "projects-to-linear"
+    asset_type: "Skill"
+    status: "Active"
+    promise: "Transforma escopos brutos em projetos Linear estruturados com hierarquia Epic-Issue, dependências e "
+    target_user: "PM, tech lead ou solo founder que usa Linear para gerenciar projetos"
+    user_pain: "Criar issues manualmente a partir de um PRD leva horas e resulta em hierarquia i"
+    job_to_be_done: "Quando tenho um escopo definido, quero que o sistema crie automaticamente o projeto no Linear"
+    input:
+      summary: "PRD, briefing ou escopo em texto"
+    output:
+      summary: "Projeto Linear estruturado + epics + issues + dependências"
+    workflow:
+      summary: "Extrair → classificar → criar hierarquia → criar no Linear via MCP"
+    evidence:
+      source: "Internal"
+    commercial:
+      monetization: "Creator Suite · L-007 Connector"
+      buyer: "PM, tech lead, agência, solo founder com Linear"
+      price_hypothesis: "R$297-R$497 standalone"
+      channel: "LinkedIn técnico + GitHub"
+    risk:
+      main_risk: "Requer Linear MCP — sem MCP funciona só como template"
+      dependency: "Claude + Linear MCP"
+      legal_platform_risk: "Medium"
+    score:
+      m001_dor_clara: 18
+      m002_output_reproduzivel: 18
+      m003_prova_de_uso: 16
+      m004_monetizacao_plausivel: 14
+      m005_baixa_friccao: 8
+      m006_canal_distribuicao: 10
+      m007_defensibilidade: 5
+      total: 89
+      tier: "Diamond"
+    next_test: "Criar tutorial 3 min + README com exemplo de PRD para Linear"
+
+  - asset_id: S-012
+    asset_name: "proprallt-card-builder"
+    asset_type: "Skill"
+    status: "Active"
+    promise: "Gera cards HTML para o AI Gov Brasil em sistema proprallt — dark theme, A4, mobile-first — a partir "
+    target_user: "Leonardo e colaboradores do AI Gov Brasil que precisam criar cards visuais"
+    user_pain: "Cards criados manualmente ficam inconsistentes em estilo e branding"
+    job_to_be_done: "Quando preciso de um card do projeto, quero gerá-lo com o sistema proprallt em um comando"
+    input:
+      summary: "Campos do card (headline, fotoprompt, formula, steps, accent_color)"
+    output:
+      summary: "Card HTML pronto + preview"
+    workflow:
+      summary: "Ler campos → aplicar template proprallt → gerar HTML"
+    evidence:
+      source: "Internal"
+    commercial:
+      monetization: "AI Gov Brasil · Creator Suite"
+      buyer: "Leonardo + colaboradores AI Gov Brasil"
+      price_hypothesis: "Internal — possível produto futuro"
+      channel: "Interno"
+    risk:
+      main_risk: "Sistema muito específico — baixa transferibilidade"
+      dependency: "Claude"
+      legal_platform_risk: "Low"
+    score:
+      m001_dor_clara: 12
+      m002_output_reproduzivel: 16
+      m003_prova_de_uso: 12
+      m004_monetizacao_plausivel: 10
+      m005_baixa_friccao: 12
+      m006_canal_distribuicao: 6
+      m007_defensibilidade: 4
+      total: 72
+      tier: "Silver"
+    next_test: "Avaliar se proprallt pode virar produto genérico para criadores"
+
+  - asset_id: S-013
+    asset_name: "x-ray-brand-layer"
+    asset_type: "Skill"
+    status: "Active"
+    promise: "Aplica identidade de marca do consultor X-Ray sobre tokens FORGE em qualquer entregável visual — whi"
+    target_user: "Consultor que usa X-Ray Suite e quer personalizar outputs com sua própria marca"
+    user_pain: "Outputs com branding genérico reduzem percepção de valor com o cliente"
+    job_to_be_done: "Quando entrego um relatório, quero que tenha minha marca para o cliente associar a qualidade ao meu "
+    input:
+      summary: "Configuração de marca (consultant_config.yaml) + descrição do output"
+    output:
+      summary: "Output com brand tokens do consultor aplicados"
+    workflow:
+      summary: "Ler config → aplicar tokens → gerar output brandado"
+    evidence:
+      source: "Internal"
+    commercial:
+      monetization: "X-Ray Suite"
+      buyer: "Consultores independentes que usam Claude para entregáveis d"
+      price_hypothesis: "Bundled no X-Ray Suite"
+      channel: "LinkedIn + comunidades de consultores"
+    risk:
+      main_risk: "Requer configuração inicial da marca — sem config usa tokens genéricos"
+      dependency: "Claude"
+      legal_platform_risk: "Low"
+    score:
+      m001_dor_clara: 18
+      m002_output_reproduzivel: 18
+      m003_prova_de_uso: 14
+      m004_monetizacao_plausivel: 15
+      m005_baixa_friccao: 10
+      m006_canal_distribuicao: 10
+      m007_defensibilidade: 5
+      total: 90
+      tier: "Diamond"
+    next_test: "Criar template consultant_config.yaml para onboarding e incluir no X-Ray Suite d"
+
+  - asset_id: S-014
+    asset_name: "x-ray-onboarding-ebook"
+    asset_type: "Skill"
+    status: "Active"
+    promise: "Gera ebook de onboarding personalizado para clientes do consultor X-Ray com estrutura, conteúdo e id"
+    target_user: "Consultor que precisa criar material de onboarding profissional para novos clien"
+    user_pain: "Criar ebook de onboarding manualmente leva dias e raramente tem design profissio"
+    job_to_be_done: "Quando começo um novo cliente, quero gerar um ebook de onboarding com minha marca em 30 minutos"
+    input:
+      summary: "Briefing do projeto + configuração de marca + informações do cliente"
+    output:
+      summary: "Ebook de onboarding HTML/PDF com marca do consultor"
+    workflow:
+      summary: "Receber briefing → estruturar conteúdo → aplicar brand → gerar ebook"
+    evidence:
+      source: "Internal"
+    commercial:
+      monetization: "X-Ray Suite"
+      buyer: "Consultores independentes em onboarding de novos clientes"
+      price_hypothesis: "Bundled no X-Ray Suite"
+      channel: "LinkedIn + comunidades de consultores"
+    risk:
+      main_risk: "Conteúdo genérico se briefing for vago — GIGO"
+      dependency: "Claude"
+      legal_platform_risk: "Low"
+    score:
+      m001_dor_clara: 18
+      m002_output_reproduzivel: 18
+      m003_prova_de_uso: 14
+      m004_monetizacao_plausivel: 15
+      m005_baixa_friccao: 10
+      m006_canal_distribuicao: 10
+      m007_defensibilidade: 5
+      total: 90
+      tier: "Diamond"
+    next_test: "Criar demo com caso real de onboarding para mostrar antes/depois"
+
+  - asset_id: S-015
+    asset_name: "workflow-to-skill-magic"
+    asset_type: "Skill"
+    status: "Active"
+    promise: "Transforma qualquer workflow descrito em linguagem natural em uma skill.md estruturada com triggers,"
+    target_user: "Profissional que descobriu como faz uma tarefa repetível e quer sistematizar com"
+    user_pain: "Workflows ficam na cabeça ou em notas soltas — nunca viram procedimento reutiliz"
+    job_to_be_done: "Quando descubro como executar bem uma tarefa recorrente, quero transformá-la em skill em 10 minutos"
+    input:
+      summary: "Descrição do workflow em linguagem natural"
+    output:
+      summary: "skill.md pronta para instalar no Claude"
+    workflow:
+      summary: "Analisar workflow → extrair steps → estruturar SKILL.md → validar triggers"
+    evidence:
+      source: "TBD — não testado externamente"
+    commercial:
+      monetization: "Creator Suite · CMD Suite"
+      buyer: "Qualquer profissional que usa Claude regularmente"
+      price_hypothesis: "R$97-R$197 standalone"
+      channel: "GitHub + LinkedIn"
+    risk:
+      main_risk: "Workflows vagos geram skills vagas — requer input estruturado"
+      dependency: "Claude"
+      legal_platform_risk: "Low"
+    score:
+      m001_dor_clara: 18
+      m002_output_reproduzivel: 18
+      m003_prova_de_uso: 12
+      m004_monetizacao_plausivel: 14
+      m005_baixa_friccao: 12
+      m006_canal_distribuicao: 10
+      m007_defensibilidade: 5
+      total: 89
+      tier: "Diamond"
+    next_test: "Gravar vídeo de 2 min mostrando um workflow virando skill em tempo real"
+
+  - asset_id: S-016
+    asset_name: "opus-reasoning-max-fak"
+    asset_type: "Skill"
+    status: "Active"
+    promise: "Ativa modo de raciocínio estendido no Opus com configuração máxima para análise estratégica com exte"
+    target_user: "Leonardo em sessões estratégicas de alto stakes com Opus"
+    user_pain: "Opus sem configuração trata perguntas estratégicas como Quick — perde profundida"
+    job_to_be_done: "Quando preciso de análise estratégica profunda, quero que o Opus opere no modo máximo de raciocínio"
+    input:
+      summary: "Prompt estratégico + contexto"
+    output:
+      summary: "Análise com extended thinking + separação FACT/INFERENCE/HYPOTHESIS/GAP"
+    workflow:
+      summary: "Configurar modo → ativar extended thinking → separação epistêmica → entregar"
+    evidence:
+      source: "Internal"
+    commercial:
+      monetization: "CMD Suite · Creator Suite"
+      buyer: "Leonardo e operadores avançados de Claude Pro"
+      price_hypothesis: "Bundled"
+      channel: "Interno"
+    risk:
+      main_risk: "Depende de modelo Opus — custo mais alto por sessão"
+      dependency: "Claude Opus"
+      legal_platform_risk: "Low"
+    score:
+      m001_dor_clara: 16
+      m002_output_reproduzivel: 18
+      m003_prova_de_uso: 16
+      m004_monetizacao_plausivel: 12
+      m005_baixa_friccao: 10
+      m006_canal_distribuicao: 8
+      m007_defensibilidade: 5
+      total: 85
+      tier: "Gold"
+    next_test: "Incluir no PersonalizationOS Course M3 como exemplo de Value Mode Diamond"
+
+  - asset_id: S-017
+    asset_name: "frankwatching-editor"
+    asset_type: "Skill"
+    status: "Active"
+    promise: "Editor no estilo FrankWatching — jornalismo digital europeu, analítico e data-driven — para adaptar "
+    target_user: "Criador ou jornalista que quer publicar em plataformas de media B2B especializad"
+    user_pain: "Conteúdo criado para LinkedIn soa informal demais para publicações especializada"
+    job_to_be_done: "Quando quero publicar em media especializada, quero que o editor adapte o tom automaticamente"
+    input:
+      summary: "Conteúdo original (post, artigo, análise)"
+    output:
+      summary: "Versão adaptada no tom FrankWatching"
+    workflow:
+      summary: "Analisar conteúdo → identificar gaps de tom → adaptar → entregar"
+    evidence:
+      source: "TBD"
+    commercial:
+      monetization: "Creator Suite"
+      buyer: "Jornalistas, analistas, criadores de conteúdo B2B"
+      price_hypothesis: "Bundled"
+      channel: "LinkedIn editorial"
+    risk:
+      main_risk: "Tom específico pode não agradar toda publicação-alvo"
+      dependency: "Claude"
+      legal_platform_risk: "Low"
+    score:
+      m001_dor_clara: 12
+      m002_output_reproduzivel: 16
+      m003_prova_de_uso: 10
+      m004_monetizacao_plausivel: 10
+      m005_baixa_friccao: 10
+      m006_canal_distribuicao: 8
+      m007_defensibilidade: 4
+      total: 70
+      tier: "Silver"
+    next_test: "Testar com 3 artigos reais e comparar com publicações FrankWatching"
+
+  - asset_id: S-018
+    asset_name: "horacio"
+    asset_type: "Skill"
+    status: "Active"
+    promise: "Workflow para criador de conteúdo EN — gestão de ideias, produção e publicação no estilo de criadore"
+    target_user: "Criador de conteúdo EN que quer sistematizar produção com volume e consistência"
+    user_pain: "Sem sistema, criação de conteúdo é reativa — publica quando tem energia"
+    job_to_be_done: "Quando quero manter consistência de publicação, quero um sistema que organize ideias e gere rascunho"
+    input:
+      summary: "Ideias de conteúdo + histórico de posts"
+    output:
+      summary: "Calendário de conteúdo + rascunhos prontos + agenda"
+    workflow:
+      summary: "Capturar ideia → classificar → expandir → agendar"
+    evidence:
+      source: "TBD"
+    commercial:
+      monetization: "Creator Suite"
+      buyer: "Criadores de conteúdo EN"
+      price_hypothesis: "Bundled"
+      channel: "TBD"
+    risk:
+      main_risk: "Sistema genérico — valor depende de customização de voz"
+      dependency: "Claude"
+      legal_platform_risk: "Low"
+    score:
+      m001_dor_clara: 14
+      m002_output_reproduzivel: 14
+      m003_prova_de_uso: 10
+      m004_monetizacao_plausivel: 12
+      m005_baixa_friccao: 10
+      m006_canal_distribuicao: 8
+      m007_defensibilidade: 4
+      total: 72
+      tier: "Silver"
+    next_test: "Definir diferencial vs. ferramentas de calendário editorial existentes"
+
+  - asset_id: S-019
+    asset_name: "notion-sync-protocol"
+    asset_type: "Skill"
+    status: "Active"
+    promise: "Protocolo de sincronização entre Claude e Notion — cria, atualiza e consulta páginas, databases e de"
+    target_user: "Profissional que usa Notion como PKM e quer que o Claude escreva diretamente no "
+    user_pain: "Copiar manualmente outputs do Claude para o Notion é fricção que interrompe o fl"
+    job_to_be_done: "Quando o Claude produz uma decisão, quero que salve diretamente no Notion"
+    input:
+      summary: "Output de qualquer sessão Claude"
+    output:
+      summary: "Entrada no Notion criada/atualizada automaticamente"
+    workflow:
+      summary: "Identificar output → formatar para Notion → criar/atualizar via MCP"
+    evidence:
+      source: "TBD"
+    commercial:
+      monetization: "Creator Suite · L-007 Connector"
+      buyer: "Qualquer usuário Claude que usa Notion como PKM"
+      price_hypothesis: "R$97-R$197 standalone"
+      channel: "LinkedIn + comunidades Notion"
+    risk:
+      main_risk: "Requer Notion MCP configurado — sem MCP não funciona"
+      dependency: "Claude + Notion MCP"
+      legal_platform_risk: "Medium"
+    score:
+      m001_dor_clara: 16
+      m002_output_reproduzivel: 16
+      m003_prova_de_uso: 12
+      m004_monetizacao_plausivel: 12
+      m005_baixa_friccao: 8
+      m006_canal_distribuicao: 8
+      m007_defensibilidade: 5
+      total: 77
+      tier: "Gold"
+    next_test: "Criar tutorial de setup Notion MCP + demo de 3 min"
+
+  - asset_id: S-020
+    asset_name: "project-packager"
+    asset_type: "Skill"
+    status: "Active"
+    promise: "Empacota qualquer projeto em estrutura GitHub-pronta — normaliza arquivos, cria README, define namin"
+    target_user: "Solo dev ou criador que quer publicar trabalho no GitHub sem gastar horas organi"
+    user_pain: "Projetos ficam em diretórios caóticos que envergonham na hora de publicar"
+    job_to_be_done: "Quando quero publicar um projeto, quero que o sistema organize tudo automaticamente"
+    input:
+      summary: "Diretório de arquivos + instrução de contexto"
+    output:
+      summary: "Repo estruturado + README + naming + ZIP"
+    workflow:
+      summary: "Analisar → estruturar → nomear → empacotar"
+    evidence:
+      source: "Internal"
+    commercial:
+      monetization: "Creator Suite · CMD-01-PPS"
+      buyer: "Solo founder, creator técnico, PM"
+      price_hypothesis: "Bundled no Creator Suite"
+      channel: "GitHub + LinkedIn técnico"
+    risk:
+      main_risk: "Projetos com estrutura muito específica podem precisar ajuste manual"
+      dependency: "Claude"
+      legal_platform_risk: "Low"
+    score:
+      m001_dor_clara: 16
+      m002_output_reproduzivel: 18
+      m003_prova_de_uso: 14
+      m004_monetizacao_plausivel: 12
+      m005_baixa_friccao: 10
+      m006_canal_distribuicao: 10
+      m007_defensibilidade: 5
+      total: 85
+      tier: "Gold"
+    next_test: "Criar demo visual de antes/depois de estrutura de diretório"
+
+  - asset_id: S-021
+    asset_name: "bussola-deliverable-forge"
+    asset_type: "Skill"
+    status: "Active"
+    promise: "Gerador de entregáveis profissionais no estilo Bússola — relatórios, diagnósticos e planos de ação c"
+    target_user: "Consultor ou analista que precisa de entregáveis estruturados com qualidade prof"
+    user_pain: "Entregáveis criados ad hoc ficam sem estrutura consistente — cada relatório pare"
+    job_to_be_done: "Quando preciso de um entregável profissional, quero que o sistema forneça estrutura e conteúdo consu"
+    input:
+      summary: "Briefing do projeto + dados disponíveis"
+    output:
+      summary: "Entregável estruturado com qualidade consultiva"
+    workflow:
+      summary: "Ler briefing → selecionar template → estruturar conteúdo → gerar"
+    evidence:
+      source: "TBD"
+    commercial:
+      monetization: "Creator Suite · X-Ray Suite"
+      buyer: "Consultores, analistas, PMs que entregam relatórios"
+      price_hypothesis: "R$197-R$497 bundled"
+      channel: "LinkedIn + comunidades de consultores"
+    risk:
+      main_risk: "Qualidade depende fortemente do briefing — GIGO"
+      dependency: "Claude"
+      legal_platform_risk: "Low"
+    score:
+      m001_dor_clara: 18
+      m002_output_reproduzivel: 18
+      m003_prova_de_uso: 12
+      m004_monetizacao_plausivel: 15
+      m005_baixa_friccao: 10
+      m006_canal_distribuicao: 10
+      m007_defensibilidade: 4
+      total: 87
+      tier: "Diamond"
+    next_test: "Criar 3 exemplos de entregáveis reais com antes/depois"
+
+  - asset_id: S-022
+    asset_name: "live-prompt-pro-converter"
+    asset_type: "Skill"
+    status: "Active"
+    promise: "Conversor do Live Prompt Pro — transforma prompts de alto desempenho em formato estruturado e reutil"
+    target_user: "Usuário do Live Prompt Pro que quer exportar e organizar seus melhores prompts"
+    user_pain: "Prompts criados em cursos ficam dispersos e difíceis de reutilizar"
+    job_to_be_done: "Quando tenho um prompt que funciona bem, quero convertê-lo em formato estruturado para minha bibliot"
+    input:
+      summary: "Prompt bruto + contexto de uso"
+    output:
+      summary: "Prompt estruturado + triggers + exemplos + categorização"
+    workflow:
+      summary: "Analisar prompt → extrair padrão → estruturar → categorizar"
+    evidence:
+      source: "TBD"
+    commercial:
+      monetization: "Creator Suite · Live Prompt Pro produto"
+      buyer: "Alunos do Live Prompt Pro"
+      price_hypothesis: "Bundled no Live Prompt Pro"
+      channel: "LinkedIn + Hotmart"
+    risk:
+      main_risk: "Dependência do produto Live Prompt Pro para ativação plena"
+      dependency: "Claude"
+      legal_platform_risk: "Low"
+    score:
+      m001_dor_clara: 14
+      m002_output_reproduzivel: 16
+      m003_prova_de_uso: 12
+      m004_monetizacao_plausivel: 12
+      m005_baixa_friccao: 10
+      m006_canal_distribuicao: 8
+      m007_defensibilidade: 4
+      total: 76
+      tier: "Gold"
+    next_test: "Criar tutorial de converter o primeiro prompt em 5 minutos"
+
+  - asset_id: S-023
+    asset_name: "cognitive-trigger-skill-os"
+    asset_type: "Skill"
+    status: "Active"
+    promise: "Sistema operacional de triggers cognitivos para skills — define quando e como skills ativam automati"
+    target_user: "Operador avançado de skill library que quer controle granular sobre ativação de "
+    user_pain: "Skills ativam em momentos errados ou não ativam quando deveriam — debugging manu"
+    job_to_be_done: "Quando projeto um sistema de skills, quero que os triggers sejam precisos e auditáveis"
+    input:
+      summary: "Descrição do trigger + contexto de ativação"
+    output:
+      summary: "Sistema de triggers documentado + regras de ativação + edge cases"
+    workflow:
+      summary: "Analisar padrões → definir triggers → documentar regras → testar"
+    evidence:
+      source: "TBD — experimental"
+    commercial:
+      monetization: "Creator Suite"
+      buyer: "Operadores avançados de Claude building skill systems"
+      price_hypothesis: "TBD"
+      channel: "GitHub técnico"
+    risk:
+      main_risk: "Conceito experimental — pode mudar com atualizações do Claude"
+      dependency: "Claude"
+      legal_platform_risk: "Low"
+    score:
+      m001_dor_clara: 12
+      m002_output_reproduzivel: 14
+      m003_prova_de_uso: 10
+      m004_monetizacao_plausivel: 10
+      m005_baixa_friccao: 8
+      m006_canal_distribuicao: 8
+      m007_defensibilidade: 5
+      total: 67
+      tier: "Silver"
+    next_test: "Validar conceito com 3 skill systems diferentes"
+
+  - asset_id: S-024
+    asset_name: "cmd-creator-skill"
+    asset_type: "Skill"
+    status: "Active"
+    promise: "Entry point skill para solo creators e agências — onboarda novos usuários com 5 perguntas, gera CMD_"
+    target_user: "Solo creator e agência pequena (1-10 pessoas) que quer configurar Claude como Pe"
+    user_pain: "Novos usuários não sabem por onde começar com 26 assets disponíveis na suite"
+    job_to_be_done: "Quando quero configurar meu Claude, quero que um sistema me faça as perguntas certas e gere minha co"
+    input:
+      summary: "5 perguntas sobre role/output/tools/language/pain"
+    output:
+      summary: "CMD_GLOBAL personalizado + vault starter + primeira skill recomendada"
+    workflow:
+      summary: "Detectar perfil → 5 perguntas → gerar L001 → gerar vault → recomendar L005"
+    evidence:
+      source: "Internal — gerado nesta sessão"
+    commercial:
+      monetization: "Creator Suite · GitHub creator-skill repo"
+      buyer: "Qualquer profissional não-dev que quer configurar Claude"
+      price_hypothesis: "Gratuito (lead magnet para PersonalizationOS Course)"
+      channel: "GitHub + LinkedIn"
+    risk:
+      main_risk: "Entry point frustra se não tiver stack completo para entregar depois"
+      dependency: "Claude"
+      legal_platform_risk: "Low"
+    score:
+      m001_dor_clara: 20
+      m002_output_reproduzivel: 18
+      m003_prova_de_uso: 16
+      m004_monetizacao_plausivel: 15
+      m005_baixa_friccao: 12
+      m006_canal_distribuicao: 10
+      m007_defensibilidade: 5
+      total: 96
+      tier: "Diamond"
+    next_test: "Publicar como primeiro arquivo do repo creator-skill no GitHub"
+
+  - asset_id: S-025
+    asset_name: "cmd-li-001-linkedin-classifier"
+    asset_type: "Skill"
+    status: "Active"
+    promise: "Classificador de posts LinkedIn por dimensões editoriais — entrega tabela estruturada pronta para ex"
+    target_user: "Leonardo e criadores classificando backlog de posts para o AI Gov Brasil"
+    user_pain: "Classificar posts manualmente por taxonomia leva horas e é inconsistente entre s"
+    job_to_be_done: "Quando colo um post, quero receber classificação completa automaticamente"
+    input:
+      summary: "Texto bruto de posts LinkedIn"
+    output:
+      summary: "Tabela com Tipo/Formato/Funil/Tom/RAG/Epistêmica"
+    workflow:
+      summary: "Colar texto → processar → entregar tabela hands-off"
+    evidence:
+      source: "Internal — testado em produção (v1.1 com fixes aplicados)"
+    commercial:
+      monetization: "AI Gov Brasil · Creator Suite"
+      buyer: "Leonardo + criadores de conteúdo com editorial OS"
+      price_hypothesis: "Internal + open source"
+      channel: "LinkedIn"
+    risk:
+      main_risk: "Depende do Manifesto RAG para máxima precisão"
+      dependency: "Claude + Manifesto RAG"
+      legal_platform_risk: "Low"
+    score:
+      m001_dor_clara: 16
+      m002_output_reproduzivel: 20
+      m003_prova_de_uso: 16
+      m004_monetizacao_plausivel: 12
+      m005_baixa_friccao: 12
+      m006_canal_distribuicao: 10
+      m007_defensibilidade: 5
+      total: 91
+      tier: "Diamond"
+    next_test: "Publicar como skill open source com exemplo de taxonomia genérica"
+
+  - asset_id: ST-001
+    asset_name: "x-ray-suite"
+    asset_type: "Suite"
+    status: "Active"
+    promise: "Biblioteca premium de skills para consultores independentes — diagnóstico, entregáveis, onboarding e"
+    target_user: "Consultor independente que precisa de qualidade de boutique com eficiência de so"
+    user_pain: "Consultores solo perdem horas em formatação e onboarding que firmas maiores têm "
+    job_to_be_done: "Quando atendo um cliente, quero ter todas as ferramentas de consultoria configuradas para focar no p"
+    input:
+      summary: "Briefing do cliente + configuração de marca"
+    output:
+      summary: "Suite completa de entregáveis consultivos com brand do consultor"
+    workflow:
+      summary: "Setup marca → configurar x-ray-brand-layer → usar bussola/ebook/diagnóstico"
+    evidence:
+      source: "Internal"
+    commercial:
+      monetization: "Creator Suite · GitHub"
+      buyer: "Consultores independentes BR/EN 5-15 anos de experiência"
+      price_hypothesis: "R$497-R$997 setup + licença"
+      channel: "LinkedIn + comunidades de consultores"
+    risk:
+      main_risk: "Valor percebido diminui sem demo visual convincente"
+      dependency: "Claude"
+      legal_platform_risk: "Low"
+    score:
+      m001_dor_clara: 18
+      m002_output_reproduzivel: 18
+      m003_prova_de_uso: 14
+      m004_monetizacao_plausivel: 15
+      m005_baixa_friccao: 8
+      m006_canal_distribuicao: 10
+      m007_defensibilidade: 5
+      total: 88
+      tier: "Diamond"
+    next_test: "Criar landing page GitHub + 3 cases de antes/depois com consultores reais"
+
+  - asset_id: ST-002
+    asset_name: "creator-suite"
+    asset_type: "Suite"
+    status: "Active"
+    promise: "26 skills para solo creators e agências cobrindo CMD automation, visual output, project management, "
+    target_user: "Solo creator ou agência digital (1-10 pessoas) que quer sistema completo de AI w"
+    user_pain: "Cada profissional usa Claude diferente — sem sistema, qualidade é inconsistente "
+    job_to_be_done: "Quando monto minha operação, quero um sistema de skills pré-configurado para todas as tarefas recorr"
+    input:
+      summary: "Perfil do operador + skill-set relevante"
+    output:
+      summary: "26 skills instaladas e funcionando com entry point (L000)"
+    workflow:
+      summary: "Instalar → onboarding via cmd-creator-skill → configurar por layer → usar"
+    evidence:
+      source: "Internal"
+    commercial:
+      monetization: "GitHub · Hotmart · PersonalizationOS Course"
+      buyer: "Solo creator, consultor, PM de agência, criador de conteúdo "
+      price_hypothesis: "R$297-R$497 bundled"
+      channel: "LinkedIn + GitHub + curso"
+    risk:
+      main_risk: "Suite grande pode parecer overwhelm sem onboarding — resolvido pelo cmd-creator-"
+      dependency: "Claude"
+      legal_platform_risk: "Low"
+    score:
+      m001_dor_clara: 20
+      m002_output_reproduzivel: 20
+      m003_prova_de_uso: 14
+      m004_monetizacao_plausivel: 15
+      m005_baixa_friccao: 8
+      m006_canal_distribuicao: 10
+      m007_defensibilidade: 5
+      total: 92
+      tier: "Diamond"
+    next_test: "Publicar no GitHub com README usando L000 como entry point"
+
+  - asset_id: ST-003
+    asset_name: "cmd-suite"
+    asset_type: "Suite"
+    status: "Active"
+    promise: "Suite de 3 CMDs especializados para operações recorrentes — packaging (PPS), melhoria de skills (MIR"
+    target_user: "Operador avançado de Claude que gerencia projetos, skills e pesquisa recorrentem"
+    user_pain: "Operações de packaging, melhoria e pesquisa sem CMD são lentas, manuais e sem ra"
+    job_to_be_done: "Quando opero meu sistema, quero CMDs específicos para cada tipo de operação"
+    input:
+      summary: "Instrução de operação (pack/improve/research)"
+    output:
+      summary: "Output estruturado com rastreabilidade D-###"
+    workflow:
+      summary: "Identificar tipo → ativar CMD correto → executar → registrar"
+    evidence:
+      source: "Internal"
+    commercial:
+      monetization: "Creator Suite"
+      buyer: "Operadores avançados de Claude, skill builders"
+      price_hypothesis: "R$197-R$397 bundled"
+      channel: "GitHub + LinkedIn técnico"
+    risk:
+      main_risk: "Curva de aprendizado dos IDs de trigger (A01-A20)"
+      dependency: "Claude"
+      legal_platform_risk: "Low"
+    score:
+      m001_dor_clara: 16
+      m002_output_reproduzivel: 18
+      m003_prova_de_uso: 14
+      m004_monetizacao_plausivel: 12
+      m005_baixa_friccao: 10
+      m006_canal_distribuicao: 8
+      m007_defensibilidade: 5
+      total: 83
+      tier: "Gold"
+    next_test: "Criar guia de 1 página qual CMD usar quando com flowchart simples"
+
+  - asset_id: ST-004
+    asset_name: "tdah-package"
+    asset_type: "Suite"
+    status: "Active"
+    promise: "Pacote completo para profissionais com TDAH — canvas de foco, curso de produtividade, assets de roti"
+    target_user: "Profissional com TDAH que quer um sistema de produtividade que respeite sua neur"
+    user_pain: "Sistemas tradicionais (GTD, Pomodoro) assumem atenção sustentada que TDAH não te"
+    job_to_be_done: "Quando quero ser produtivo com TDAH, quero um sistema que entenda minha neurologia e adapte a rotina"
+    input:
+      summary: "Estado de energia + lista de tarefas"
+    output:
+      summary: "Dashboard do dia + rotina adaptada + sessões focadas"
+    workflow:
+      summary: "Declarar energia → filtrar tarefas → executar sessão → registrar"
+    evidence:
+      source: "Internal — D-024 confirmado como business package completo"
+    commercial:
+      monetization: "Creator Suite · Hotmart"
+      buyer: "Profissionais com TDAH diagnosticado ou suspeito 25-45 anos "
+      price_hypothesis: "R$197-R$497"
+      channel: "LinkedIn + comunidades TDAH BR + TikTok"
+    risk:
+      main_risk: "Nicho requer sensibilidade — não pode overclamar resultados"
+      dependency: "Claude"
+      legal_platform_risk: "Low"
+    score:
+      m001_dor_clara: 20
+      m002_output_reproduzivel: 18
+      m003_prova_de_uso: 14
+      m004_monetizacao_plausivel: 15
+      m005_baixa_friccao: 10
+      m006_canal_distribuicao: 10
+      m007_defensibilidade: 5
+      total: 92
+      tier: "Diamond"
+    next_test: "Testar com 5 usuários com TDAH antes de lançar"
+
+  - asset_id: P-001
+    asset_name: "empower-v7"
+    asset_type: "Produto"
+    status: "Validating"
+    promise: "Avaliador operacional de profissionais e equipes usando Claude — mede produtividade, qualidade de ou"
+    target_user: "Gestores e líderes que precisam avaliar desempenho de colaboradores que usam IA"
+    user_pain: "Avaliação de performance de uso de IA é subjetiva — sem benchmark cada gestor av"
+    job_to_be_done: "Quando preciso avaliar como meu time usa Claude, quero uma métrica objetiva e comparável"
+    input:
+      summary: "Input de trabalho do colaborador + critérios de avaliação"
+    output:
+      summary: "Score de performance + relatório + recomendações"
+    workflow:
+      summary: "Definir critérios → avaliar output → calcular score → gerar relatório"
+    evidence:
+      source: "Internal — blocker ativo: fix export + modo PT pendente"
+    commercial:
+      monetization: "Standalone · possível integração Hotmart"
+      buyer: "Gestores de times que usam Claude, RH, consultoras de L&D"
+      price_hypothesis: "R$497-R$997 por licença"
+      channel: "LinkedIn B2B + consultoras de RH"
+    risk:
+      main_risk: "Blocker: export não funciona; modo PT não implementado — aguarda v7.1"
+      dependency: "Claude"
+      legal_platform_risk: "Medium"
+    score:
+      m001_dor_clara: 18
+      m002_output_reproduzivel: 16
+      m003_prova_de_uso: 12
+      m004_monetizacao_plausivel: 15
+      m005_baixa_friccao: 6
+      m006_canal_distribuicao: 8
+      m007_defensibilidade: 5
+      total: 80
+      tier: "Gold"
+    next_test: "Resolver blockers (export fix + PT mode) antes de publicação — target v7.1 em 2 "
+
+  - asset_id: P-002
+    asset_name: "a-z-claude"
+    asset_type: "Produto"
+    status: "Validating"
+    promise: "Produto educacional A-Z sobre Claude — da tese de que personalização avançada entrega vantagem compe"
+    target_user: "Profissional que quer entender Claude profundamente e não só usar"
+    user_pain: "Maioria aprende Claude de forma fragmentada — tutorial aqui, dica lá, sem arquit"
+    job_to_be_done: "Quando quero dominar Claude, quero uma fonte que vá do conceito ao sistema com visão completa"
+    input:
+      summary: "Nível atual com Claude + objetivos profissionais"
+    output:
+      summary: "Framework A-Z + implementação guiada + sistema personalizado funcionando"
+    workflow:
+      summary: "Diagnóstico → arquitetura → implementação → validação"
+    evidence:
+      source: "Internal — tese em desenvolvimento"
+    commercial:
+      monetization: "Hotmart · LinkedIn · PersonalizationOS Course (relacionado)"
+      buyer: "Profissional do conhecimento BR 25-50 anos"
+      price_hypothesis: "R$297-R$597"
+      channel: "LinkedIn + Hotmart"
+    risk:
+      main_risk: "Sobreposição com PersonalizationOS Course — risco de canibalização"
+      dependency: "Claude"
+      legal_platform_risk: "Low"
+    score:
+      m001_dor_clara: 18
+      m002_output_reproduzivel: 16
+      m003_prova_de_uso: 12
+      m004_monetizacao_plausivel: 15
+      m005_baixa_friccao: 8
+      m006_canal_distribuicao: 10
+      m007_defensibilidade: 5
+      total: 84
+      tier: "Gold"
+    next_test: "Clarificar diferencial vs PersonalizationOS Course — pode ser módulo premium"
+
+  - asset_id: P-003
+    asset_name: "live-prompt-pro"
+    asset_type: "Produto"
+    status: "Active"
+    promise: "Produto de prompts de alto desempenho para uso profissional — biblioteca curada de prompts para tare"
+    target_user: "Profissional que quer prompts que funcionem sem precisar aprender engenharia de "
+    user_pain: "Prompts genéricos entregam resultados genéricos — cada profissional reinventa a "
+    job_to_be_done: "Quando faço uma tarefa recorrente, quero ter um prompt já otimizado para aquela tarefa"
+    input:
+      summary: "Tarefa + contexto profissional"
+    output:
+      summary: "Prompt otimizado pronto para uso"
+    workflow:
+      summary: "Identificar tarefa → selecionar prompt → adaptar → usar"
+    evidence:
+      source: "Internal"
+    commercial:
+      monetization: "Hotmart · LinkedIn"
+      buyer: "Profissional BR não-dev 25-50 anos"
+      price_hypothesis: "R$97-R$297"
+      channel: "LinkedIn + Hotmart"
+    risk:
+      main_risk: "Risco de commoditização — prompts são facilmente copiados"
+      dependency: "Claude"
+      legal_platform_risk: "Low"
+    score:
+      m001_dor_clara: 18
+      m002_output_reproduzivel: 16
+      m003_prova_de_uso: 12
+      m004_monetizacao_plausivel: 14
+      m005_baixa_friccao: 12
+      m006_canal_distribuicao: 10
+      m007_defensibilidade: 4
+      total: 86
+      tier: "Gold"
+    next_test: "Criar demo de 5 prompts mais populares como lead magnet gratuito"
+
+  - asset_id: P-004
+    asset_name: "bussola-pme"
+    asset_type: "Produto"
+    status: "Active"
+    promise: "Metodologia de estratégia para PMEs usando Claude como parceiro de pensamento — diagnóstico, planeja"
+    target_user: "Dono de PME que quer usar IA para tomar melhores decisões estratégicas"
+    user_pain: "PME sem acesso a consultoria cara fica sem metodologia estratégica — decide no f"
+    job_to_be_done: "Quando preciso de decisão estratégica na minha PME, quero uma metodologia acessível com IA"
+    input:
+      summary: "Dados do negócio + decisão pendente"
+    output:
+      summary: "Diagnóstico estratégico + opções + recomendação"
+    workflow:
+      summary: "Diagnóstico → planejamento → execução → revisão"
+    evidence:
+      source: "TBD"
+    commercial:
+      monetization: "Hotmart · LinkedIn"
+      buyer: "Dono de PME BR 30-55 anos faturamento R$500k-R$5M"
+      price_hypothesis: "R$297-R$797"
+      channel: "LinkedIn B2B + associações empresariais"
+    risk:
+      main_risk: "Mercado PME tem resistência a pagar por metodologia — validar WTP"
+      dependency: "Claude"
+      legal_platform_risk: "Low"
+    score:
+      m001_dor_clara: 18
+      m002_output_reproduzivel: 14
+      m003_prova_de_uso: 10
+      m004_monetizacao_plausivel: 12
+      m005_baixa_friccao: 8
+      m006_canal_distribuicao: 8
+      m007_defensibilidade: 5
+      total: 75
+      tier: "Gold"
+    next_test: "Rodar diagnóstico gratuito com 3 PMEs e documentar resultado como case"
+
+  - asset_id: P-005
+    asset_name: "scripity"
+    asset_type: "Produto"
+    status: "Active"
+    promise: "Produto de geração de scripts para criadores de conteúdo — roteiros YouTube, posts LinkedIn, emails "
+    target_user: "Criador de conteúdo que sabe o que quer dizer mas não sabe como estruturar"
+    user_pain: "Conteúdo sem estrutura perde engajamento — creator com boa ideia perde para crea"
+    job_to_be_done: "Quando tenho uma ideia, quero transformá-la em script profissional rapidamente"
+    input:
+      summary: "Ideia bruta + contexto de formato"
+    output:
+      summary: "Script estruturado pronto para gravar ou publicar"
+    workflow:
+      summary: "Capturar ideia → identificar formato → estruturar script → entregar"
+    evidence:
+      source: "TBD"
+    commercial:
+      monetization: "Hotmart · LinkedIn"
+      buyer: "Creator BR 25-40 anos que publica em vídeo ou texto"
+      price_hypothesis: "R$97-R$297"
+      channel: "LinkedIn + YouTube + Hotmart"
+    risk:
+      main_risk: "Competição alta com Jasper, Copy.ai — diferencial deve ser BR + estrutura"
+      dependency: "Claude"
+      legal_platform_risk: "Low"
+    score:
+      m001_dor_clara: 16
+      m002_output_reproduzivel: 16
+      m003_prova_de_uso: 12
+      m004_monetizacao_plausivel: 12
+      m005_baixa_friccao: 10
+      m006_canal_distribuicao: 10
+      m007_defensibilidade: 4
+      total: 80
+      tier: "Gold"
+    next_test: "Definir 3 formatos-foco (YT, LinkedIn, email) e criar demo para cada"
+
+  - asset_id: P-006
+    asset_name: "executive-artifact-system-v3"
+    asset_type: "Produto"
+    status: "Active"
+    promise: "Sistema de geração de artefatos executivos — relatórios, decks de investimento, one-pagers e memos c"
+    target_user: "C-level e founders que precisam de documentos executivos com qualidade de Big 4"
+    user_pain: "Documentos executivos criados manualmente levam dias e raramente têm estrutura e"
+    job_to_be_done: "Quando preciso de documento executivo, quero geração com qualidade de MBB sem contratar consultoria"
+    input:
+      summary: "Briefing do contexto + dados relevantes + destinatário"
+    output:
+      summary: "Artefato executivo pronto (PDF/DOCX) com qualidade de consultoria"
+    workflow:
+      summary: "Briefing → estrutura → conteúdo → formatação → entrega"
+    evidence:
+      source: "Internal v3"
+    commercial:
+      monetization: "Creator Suite · X-Ray Suite"
+      buyer: "C-level, founders, consultores sênior BR/EN"
+      price_hypothesis: "R$497-R$997"
+      channel: "LinkedIn B2B + consultoras"
+    risk:
+      main_risk: "Tom executivo difícil de calibrar sem briefing detalhado — GIGO"
+      dependency: "Claude"
+      legal_platform_risk: "Low"
+    score:
+      m001_dor_clara: 18
+      m002_output_reproduzivel: 18
+      m003_prova_de_uso: 14
+      m004_monetizacao_plausivel: 15
+      m005_baixa_friccao: 8
+      m006_canal_distribuicao: 10
+      m007_defensibilidade: 5
+      total: 88
+      tier: "Diamond"
+    next_test: "Criar 3 templates de artefato executivo com exemplos reais anonimizados"
+
+  - asset_id: P-007
+    asset_name: "livro-dk-style"
+    asset_type: "Produto"
+    status: "Active"
+    promise: "Livro educacional no estilo DK sobre Claude e AI Gov Brasil — visual, denso, referenciável, decision"
+    target_user: "Profissional BR que quer entender AI governance e personalização Claude de forma"
+    user_pain: "Materiais educacionais de AI são texto-densos ou superficialmente visuais — falt"
+    job_to_be_done: "Quando quero aprender AI governance, quero um livro que posso consultar como referência"
+    input:
+      summary: "Leitura passiva"
+    output:
+      summary: "Livro visual de referência sobre AI Gov + personalização Claude"
+    workflow:
+      summary: "Editar capítulos → revisar → diagramar → publicar"
+    evidence:
+      source: "Internal — P1 concluído (D-20260519-002)"
+    commercial:
+      monetization: "Hotmart · GitHub · LinkedIn"
+      buyer: "Profissional BR com Claude 28-50 anos"
+      price_hypothesis: "R$47-R$97 ebook ou gratuito como lead magnet"
+      channel: "LinkedIn editorial + Hotmart"
+    risk:
+      main_risk: "Projeto longo — risco de não completar antes da janela de mercado"
+      dependency: "Claude"
+      legal_platform_risk: "Low"
+    score:
+      m001_dor_clara: 16
+      m002_output_reproduzivel: 14
+      m003_prova_de_uso: 10
+      m004_monetizacao_plausivel: 12
+      m005_baixa_friccao: 8
+      m006_canal_distribuicao: 10
+      m007_defensibilidade: 5
+      total: 75
+      tier: "Gold"
+    next_test: "Definir posição lead magnet gratuito vs produto pago"
+
+  - asset_id: P-008
+    asset_name: "tdah-linear-workflow-os-commercial"
+    asset_type: "Produto"
+    status: "Active"
+    promise: "Sistema comercial de workflow OS para profissionais com TDAH integrado ao Linear — gestão de energia"
+    target_user: "Profissional com TDAH que usa ou quer usar Linear como sistema de trabalho"
+    user_pain: "Linear é poderoso mas não foi desenhado para TDAH — sem customização neurológica"
+    job_to_be_done: "Quando uso Linear, quero que o sistema saiba do meu TDAH e adapte apresentação e priorização"
+    input:
+      summary: "Estado de energia + tarefas no Linear"
+    output:
+      summary: "Workflow do dia adaptado ao TDAH + Linear integrado + rotina estruturada"
+    workflow:
+      summary: "Setup Linear → configurar workflow OS → executar sessão focada"
+    evidence:
+      source: "Internal — arquivo maior do corpus (65KB)"
+    commercial:
+      monetization: "TDAH Package · Hotmart"
+      buyer: "Profissional com TDAH que usa Linear 25-45 anos BR"
+      price_hypothesis: "R$297-R$597"
+      channel: "LinkedIn + comunidades TDAH + Linear communities"
+    risk:
+      main_risk: "Requer Linear — mercado de usuários Linear no BR ainda pequeno"
+      dependency: "Claude + Linear"
+      legal_platform_risk: "Medium"
+    score:
+      m001_dor_clara: 18
+      m002_output_reproduzivel: 18
+      m003_prova_de_uso: 14
+      m004_monetizacao_plausivel: 14
+      m005_baixa_friccao: 8
+      m006_canal_distribuicao: 8
+      m007_defensibilidade: 5
+      total: 85
+      tier: "Gold"
+    next_test: "Criar landing page para TDAH + Linear com demo de 3 min"
+
+  - asset_id: C-001
+    asset_name: "personalization-os-course-v1"
+    asset_type: "Curso"
+    status: "Active"
+    promise: "Curso de personalização Claude para power users não-técnicos — 6 módulos cobrindo stack de 8 camadas"
+    target_user: "Power user não-técnico (consultor, gestor, pesquisador) que usa Claude Pro há ma"
+    user_pain: "Re-contexto constante, respostas inconsistentes, nenhum sistema — só prompts ad "
+    job_to_be_done: "Quando quero dominar Claude, quero construir meu próprio stack de personalização para ter respostas "
+    input:
+      summary: "Nível atual com Claude + conta Pro ativa"
+    output:
+      summary: "Stack de personalização próprio funcionando — CMD Global + Project + Skills + St"
+    workflow:
+      summary: "M1 arquitetura → M2 orçamento → M3 value modes → M4 estilo → M5 personas → M6 au"
+    evidence:
+      source: "ICP validado (Sheet 04 do Numbers) · blueprint completo documentado"
+    commercial:
+      monetization: "Hotmart · LinkedIn · GitHub (creator-skill como lead magnet)"
+      buyer: "Consultor/gestor/pesquisador/fundador BR 28-55 anos Claude P"
+      price_hypothesis: "R$297-R$497"
+      channel: "LinkedIn PT-BR + Hotmart"
+    risk:
+      main_risk: "Lançamento requer 6 módulos gravados + página de venda + lead magnet — 60 dias d"
+      dependency: "Claude"
+      legal_platform_risk: "Low"
+    score:
+      m001_dor_clara: 20
+      m002_output_reproduzivel: 20
+      m003_prova_de_uso: 18
+      m004_monetizacao_plausivel: 15
+      m005_baixa_friccao: 10
+      m006_canal_distribuicao: 10
+      m007_defensibilidade: 5
+      total: 98
+      tier: "Diamond"
+    next_test: "Gravar M1 como módulo público gratuito · usar creator-skill como lead magnet · l"
+
+  - asset_id: F-001
+    asset_name: "editorial-os-fullstack-runtime-v1"
+    asset_type: "Framework"
+    status: "Active"
+    promise: "Sistema operacional editorial completo — 7 camadas com 11 operadores, 17 formatos, cadência semanal "
+    target_user: "Criador de conteúdo que quer sistema editorial sem equipe — publicar 5 peças por"
+    user_pain: "Produção de conteúdo caótica — cada semana começa do zero, tom inconsistente, se"
+    job_to_be_done: "Quando quero produzir conteúdo consistentemente, quero um OS editorial que decida o quê, quando e co"
+    input:
+      summary: "Contexto editorial + Manifesto RAG"
+    output:
+      summary: "Calendário semanal + peças produzidas + métricas + evolução do manifesto"
+    workflow:
+      summary: "Setup → sprint planning → produção diária → quality gate → distribuição → analyt"
+    evidence:
+      source: "Internal — documentado em 27KB"
+    commercial:
+      monetization: "PersonalizationOS Course · Creator Suite · Hotmart"
+      buyer: "Criador de conteúdo BR, gestor editorial, solo founder com m"
+      price_hypothesis: "R$197-R$497 bundled"
+      channel: "LinkedIn + GitHub + curso"
+    risk:
+      main_risk: "Valor só percebido depois de 2-3 semanas de operação — onboarding crítico"
+      dependency: "Claude + Linear + Buffer + Beehiiv"
+      legal_platform_risk: "Low"
+    score:
+      m001_dor_clara: 20
+      m002_output_reproduzivel: 20
+      m003_prova_de_uso: 16
+      m004_monetizacao_plausivel: 15
+      m005_baixa_friccao: 10
+      m006_canal_distribuicao: 10
+      m007_defensibilidade: 5
+      total: 96
+      tier: "Diamond"
+    next_test: "Publicar case de Bruno (Story 02) como prova social antes do lançamento do curso"
+
+  - asset_id: F-002
+    asset_name: "manifesto-editorial-rag-v1"
+    asset_type: "Framework"
+    status: "Active"
+    promise: "Corpus canônico em YAML da identidade editorial do AI Gov Brasil — taxonomia de formatos, operadores"
+    target_user: "Agente editorial do AI Gov Brasil que precisa de fonte canônica para produção co"
+    user_pain: "Sem manifesto, cada post tem identidade diferente — não existe marca editorial c"
+    job_to_be_done: "Quando o agente editorial produz, quero que consulte a fonte canônica da marca"
+    input:
+      summary: "Nome do formato + operador + proof block"
+    output:
+      summary: "Output editorial alinhado com identidade da marca"
+    workflow:
+      summary: "Carregar manifesto → consultar seção relevante → produzir conforme taxonomia"
+    evidence:
+      source: "Internal — 154 nós compilados 2026-05-19"
+    commercial:
+      monetization: "AI Gov Brasil · Editorial OS · possível template genérico"
+      buyer: "Leonardo + colaboradores AI Gov Brasil"
+      price_hypothesis: "Internal — template genérico R$97-R$197"
+      channel: "Interno"
+    risk:
+      main_risk: "Manifesto fica desatualizado sem ciclo mensal de revisão Opus"
+      dependency: "Claude"
+      legal_platform_risk: "Low"
+    score:
+      m001_dor_clara: 14
+      m002_output_reproduzivel: 20
+      m003_prova_de_uso: 16
+      m004_monetizacao_plausivel: 12
+      m005_baixa_friccao: 10
+      m006_canal_distribuicao: 8
+      m007_defensibilidade: 5
+      total: 85
+      tier: "Gold"
+    next_test: "Criar template de Manifesto Editorial genérico não específico do AI Gov para ven"
+
+  - asset_id: F-003
+    asset_name: "personal-ai-os-methodology"
+    asset_type: "Framework"
+    status: "Active"
+    promise: "Metodologia completa de construção de Personal AI OS para não-devs — stack de 8 camadas, budget form"
+    target_user: "Profissional não-técnico que quer metodologia estruturada para personalizar Clau"
+    user_pain: "Usar Claude avançado sem metodologia resulta em configuração ad hoc que não esca"
+    job_to_be_done: "Quando quero sistematizar meu uso de Claude, quero uma metodologia com passos claros"
+    input:
+      summary: "Contexto profissional + objetivos de trabalho"
+    output:
+      summary: "Personal AI OS configurado e funcionando + documentação transmissível"
+    workflow:
+      summary: "L000 onboarding → L001-L006 setup → L004 vault → L005 skills → operação diária"
+    evidence:
+      source: "Internal — backbone do PersonalizationOS Course"
+    commercial:
+      monetization: "PersonalizationOS Course · Creator Suite · Template Library"
+      buyer: "Qualquer profissional do conhecimento BR/EN"
+      price_hypothesis: "Bundled no curso ou open source no GitHub"
+      channel: "LinkedIn + GitHub + YouTube"
+    risk:
+      main_risk: "Abstrata sem exemplos — valor só percebido com implementação"
+      dependency: "Claude"
+      legal_platform_risk: "Low"
+    score:
+      m001_dor_clara: 18
+      m002_output_reproduzivel: 20
+      m003_prova_de_uso: 16
+      m004_monetizacao_plausivel: 15
+      m005_baixa_friccao: 10
+      m006_canal_distribuicao: 10
+      m007_defensibilidade: 5
+      total: 94
+      tier: "Diamond"
+    next_test: "Publicar summary da metodologia como white paper gratuito no GitHub"
+
+  - asset_id: T-001
+    asset_name: "cmd-global-v2-system-instruction"
+    asset_type: "Template"
+    status: "Active"
+    promise: "Template XML de Global Instructions com classificador Cynefin, value mode system, framework rules, q"
+    target_user: "Operador avançado de Claude que precisa de sistema de decisões auditável"
+    user_pain: "Global Instructions genérico não tem rastreabilidade — decisões ficam em convers"
+    job_to_be_done: "Quando opero estrategicamente, quero que o Claude registre decisões com D-### e separe FACT/INFERENC"
+    input:
+      summary: "Personalização do operador (nome, projetos, conceitos)"
+    output:
+      summary: "CMD_GLOBAL instalado nas Preferences + sistema de IDs ativo"
+    workflow:
+      summary: "Substituir placeholders → instalar em Preferences → testar com 3 queries"
+    evidence:
+      source: "Internal"
+    commercial:
+      monetization: "Creator Suite · CMD Suite · PersonalizationOS Course T-01"
+      buyer: "Operadores avançados, consultores, fundadores"
+      price_hypothesis: "Bundled ou gratuito como lead magnet"
+      channel: "GitHub + LinkedIn técnico"
+    risk:
+      main_risk: "Curva de aprendizado dos IDs pode frear adoção"
+      dependency: "Claude"
+      legal_platform_risk: "Low"
+    score:
+      m001_dor_clara: 16
+      m002_output_reproduzivel: 20
+      m003_prova_de_uso: 16
+      m004_monetizacao_plausivel: 12
+      m005_baixa_friccao: 12
+      m006_canal_distribuicao: 10
+      m007_defensibilidade: 5
+      total: 91
+      tier: "Diamond"
+    next_test: "Publicar versão simplificada no GitHub como CMD_GLOBAL_STARTER.md"
+
+  - asset_id: T-002
+    asset_name: "l001-global-editorial-creator"
+    asset_type: "Template"
+    status: "Active"
+    promise: "Global Instructions integrado com Editorial OS — identidade profissional, value mode system e editor"
+    target_user: "Criador de conteúdo que quer personalização Claude + sistema editorial em uma co"
+    user_pain: "Dois sistemas separados (CMD_GLOBAL + Editorial OS) criam fricção para o usuário"
+    job_to_be_done: "Quando configuro Claude para criação de conteúdo, quero um template que integre identidade e editori"
+    input:
+      summary: "Dados do criador (nome, marca, produtos, canal)"
+    output:
+      summary: "CMD Global editorial instalado + editorial mode ativo quando projeto EDITORIAL p"
+    workflow:
+      summary: "Substituir placeholders → instalar em Preferences → criar projeto EDITORIAL → te"
+    evidence:
+      source: "Internal — gerado nesta sessão"
+    commercial:
+      monetization: "Creator Suite · Editorial OS · PersonalizationOS Course"
+      buyer: "Criadores de conteúdo, consultores com marca pessoal, fundad"
+      price_hypothesis: "Gratuito (lead magnet) ou bundled no curso"
+      channel: "GitHub + LinkedIn"
+    risk:
+      main_risk: "Complexidade pode frear adoção — versão simplificada necessária para iniciantes"
+      dependency: "Claude"
+      legal_platform_risk: "Low"
+    score:
+      m001_dor_clara: 18
+      m002_output_reproduzivel: 20
+      m003_prova_de_uso: 16
+      m004_monetizacao_plausivel: 14
+      m005_baixa_friccao: 12
+      m006_canal_distribuicao: 10
+      m007_defensibilidade: 5
+      total: 95
+      tier: "Diamond"
+    next_test: "Publicar como primeiro template da Template Library no GitHub"
+
+  - asset_id: T-003
+    asset_name: "template-library-l000-l008"
+    asset_type: "Template"
+    status: "Active"
+    promise: "Biblioteca de 18 templates renomeados L-000 a L-008 com progressive disclosure e dependency chain — "
+    target_user: "Qualquer usuário que quer construir seu Personal AI OS de forma sistemática"
+    user_pain: "Sem biblioteca ordenada, usuário começa pela camada errada e cria stack sem fund"
+    job_to_be_done: "Quando quero construir meu AI OS, quero saber qual template instalar em qual ordem"
+    input:
+      summary: "Perfil do usuário + objetivo do projeto"
+    output:
+      summary: "18 templates organizados por camada + README de onboarding"
+    workflow:
+      summary: "L000 → L001 → L002 → L003 → L004 → L005 → L006 → L007 → L008"
+    evidence:
+      source: "Internal — gerado nesta sessão"
+    commercial:
+      monetization: "PersonalizationOS Course · Creator Suite · GitHub"
+      buyer: "Qualquer usuário Claude que quer sistematizar uso"
+      price_hypothesis: "Gratuito (GitHub) ou bundled no curso como handouts"
+      channel: "GitHub + LinkedIn + curso"
+    risk:
+      main_risk: "Valor percebido requer entender arquitetura primeiro — M1 é o pré-requisito"
+      dependency: "Claude"
+      legal_platform_risk: "Low"
+    score:
+      m001_dor_clara: 18
+      m002_output_reproduzivel: 20
+      m003_prova_de_uso: 16
+      m004_monetizacao_plausivel: 14
+      m005_baixa_friccao: 12
+      m006_canal_distribuicao: 10
+      m007_defensibilidade: 5
+      total: 95
+      tier: "Diamond"
+    next_test: "Publicar no GitHub com README + diagrama visual da dependency chain"

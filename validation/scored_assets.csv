@@ -1,0 +1,35 @@
+asset_id,asset_name,asset_type,score,tier,m001_pain,m002_repro,m003_proof,m004_monetize,m005_friction,m006_channel,m007_defense,status
+P-001,PersonalizationOS Course v1,Curso,86.0,Diamond,10,9,7,9,8,8,9,Active
+P-002,Editorial OS FullStack Runtime v1,Framework,82.0,Gold,9,9,8,7,7,8,9,Active
+S-001,cmd-creator-skill,Skill,81.0,Gold,9,9,5,8,10,9,8,Active
+F-002,Progressive Disclosure L000-L008,Framework,79.5,Gold,8,9,8,7,8,7,8,Active
+S-005,cognitive-framework-router,Skill,79.0,Gold,8,9,8,6,9,7,8,Active
+S-002,cmd-01-pps,Skill,78.5,Gold,8,9,8,6,9,7,7,Active
+P-005,A-Z Claude,Produto educacional,77.5,Gold,9,8,6,8,8,8,7,Draft
+S-007,forge-visual-canvas,Skill,77.5,Gold,8,9,7,7,8,7,8,Active
+SU-001,X-Ray Suite,Suite,77.5,Gold,8,9,7,8,6,7,9,Active
+SU-003,CMD Suite,Suite,77.5,Gold,8,9,8,6,8,7,7,Active
+F-001,MCP Minimum Context Packet,Framework,77.5,Gold,8,9,7,7,8,7,8,Active
+SU-002,Creator Suite,Suite,76.5,Gold,8,9,7,7,6,8,8,Active
+S-009,projects-to-linear,Skill,75.5,Gold,8,9,7,7,7,7,6,Active
+S-013,workflow-to-skill-magic,Skill,75.5,Gold,8,9,6,7,8,7,8,Active
+P-004,tdah-linear-workflow-os v2.0.0,Produto comercial,74.5,Gold,9,8,7,7,6,6,8,Active
+S-010,proprallt-card-builder,Skill,74.5,Gold,7,9,7,6,9,7,7,Active
+P-003,TDAH Package completo,Produto,73.5,Silver,9,7,6,8,7,7,7,Validating
+S-008,ai-gov-discovery-orchestrator,Skill,73.0,Silver,7,9,9,5,5,6,9,Active
+S-003,cmd-02-mirp,Skill,72.5,Silver,7,8,7,6,9,7,7,Active
+S-018,adhd-desk-dashboard,Skill,72.5,Silver,8,8,6,7,8,7,6,Active
+S-016,bussola-deliverable-forge,Skill,72.0,Silver,8,8,6,7,7,7,7,Draft
+S-011,x-ray-brand-layer,Skill,70.0,Silver,7,8,6,6,9,6,8,Active
+S-017,project-packager,Skill,69.0,Silver,7,8,6,6,8,7,6,Draft
+P-010,Livro DK-style,Livro digital,68.5,Silver,8,7,4,7,8,8,8,Validating
+S-004,cmd-03-maro,Skill,68.5,Silver,7,8,6,6,8,6,7,Active
+S-015,live-prompt-pro-converter,Skill,68.5,Silver,7,8,5,7,8,7,6,Draft
+P-006,Empower v7,Produto,68.0,Silver,8,7,5,8,5,7,8,Validating
+P-009,Executive Artifact System v3,Framework,67.5,Silver,7,8,6,6,7,6,7,Draft
+P-007,Bússola PME,Produto,66.5,Silver,8,7,5,7,7,6,6,Draft
+S-014,opus-reasoning-max-fak,Skill,66.0,Silver,7,8,6,5,7,6,7,Active
+S-012,x-ray-onboarding-ebook,Skill,65.5,Silver,7,7,5,6,8,7,7,Active
+S-006,cenefim (Cynefin Classifier),Skill,63.5,Silver,6,8,5,5,9,6,6,Active
+P-008,Scripity,Produto,59.5,Bronze,6,7,4,6,8,6,5,Draft
+S-019,_cognitive-trigger-skill-os,Skill,57.5,Bronze,6,7,5,4,7,5,7,Draft
